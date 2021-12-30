@@ -26,3 +26,14 @@ function chngBg() {
   if (this.scrollY >= 50) header.classList.add("scroll");
   else header.classList.remove("scroll");
 }
+
+// ==== SCROLL REVEAL ANIMATION  =====
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "60px",
+  duration: 2000,
+  delay: 300,
+});
+sr.reveal(".home *, h2, footer ul");
+sr.reveal(".prod .text , .state .image, .lap .image", { origin: "left" });
+sr.reveal(".prod .image, .state .text, .lap .text", { origin: "right" });
